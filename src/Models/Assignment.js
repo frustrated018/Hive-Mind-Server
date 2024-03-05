@@ -27,8 +27,8 @@ const AssignmentSchema = new Schema({
     required: true,
   },
   creator: {
-    type: String,
-    required: true,
+    name: { type: String, required: true },
+    email: { type: String, required: true },
   },
   status: {
     type: String,
