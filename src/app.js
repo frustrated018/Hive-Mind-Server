@@ -3,12 +3,15 @@ require("dotenv").config();
 
 const app = express();
 
-//! Assignment related routes
+//! MiddleWares
+app.use(express.json());
+
+//* Assignment related routes
 
 const assignmentRoutes = require("./Routes/AssignmentRoutes");
 app.use("/assignments", assignmentRoutes);
 
-//! Cheking if shit is running
+//* Cheking if shit is running
 
 app.get("/health", (req, res) => {
   res.send("Server is running...");
