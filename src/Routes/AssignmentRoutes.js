@@ -11,7 +11,7 @@ router.get("/", findAllAssignments);
 //! Finding Assignmet by ID
 router.get("/findbyid", findAssignmentById);
 
-//! Update status
+//! Update status to "appoved" or "rejected"
 router.get("/change-status", statusChange);
 
 //! Adding Assignment
