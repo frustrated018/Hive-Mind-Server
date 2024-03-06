@@ -15,12 +15,13 @@ const AssignmentSchema = new Schema({
   },
   marks: {
     type: Number,
-    required: true,
+    default: "00",
   },
   difficulty: {
     type: String,
     required: true,
-    default: "normal",
+    enum: ["easy", "medium", "hard"],
+    default: "easy",
   },
   status: {
     type: String,
@@ -32,7 +33,8 @@ const AssignmentSchema = new Schema({
   },
   status: {
     type: String,
-    required: true,
+    enum: ["pending", "approved", "rejected"],
+    default: "pending",
   },
   due: {
     type: Date,
