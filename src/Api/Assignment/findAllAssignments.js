@@ -1,5 +1,8 @@
 const Assignment = require("../../Models/Assignment");
 
+
+//TODO: Update the aggrigate pipeline to Paginate the data for an even faster load on the client side
+
 const findAllAssignments = async (req, res) => {
   const result = await Assignment.aggregate([
     {
